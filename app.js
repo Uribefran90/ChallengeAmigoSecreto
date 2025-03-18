@@ -1,10 +1,18 @@
-/* Agregar nombres:
-Los usuarios escribirán el nombre de un amigo en un campo de texto
-y lo agregarán a una lista visible al hacer clic en "Adicionar". */
+let amigos = [];
 
-/* Validar entrada:
-Si el campo de texto está vacío,
-el programa mostrará una alerta pidiendo un nombre válido. */
+//Capturar el valor del campo de entrada
+function agregarAmigo() {
+    //Validar la entrada
+    if (document.getElementById("amigo").value == "") {
+        alert("Por favor, inserte un nombre.");
+    } else {
+        //Actualizar el array de amigos
+        amigos.push(document.getElementById("amigo").value);
+        //Limpiar el campo de entrada
+        document.getElementById("amigo").value = "";
+    console.log(amigos);}
+}
+
 
 /* Visualizar la lista:
 Los nombres ingresados aparecerán en una lista
